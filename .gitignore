@@ -1,0 +1,16 @@
+# Python cache and environment
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# IDE settings
+.idea/
+.vscode/
+
+# Uploaded media
+static/uploads/
+
+# OS-specific junk
+.DS_Store
+Thumbs.db

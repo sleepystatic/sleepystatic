@@ -1,0 +1,325 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+body {
+    background: url("white_static.gif") no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    overflow: hidden; /* Prevents scrolling */
+    position: relative;
+}
+
+#container {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    z-index: 0;
+}
+
+#logo {
+    width: 225px; /* Adjust size as needed */
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#tv-guide {
+    display: flex;
+    flex-direction: column;
+    width: 450px;
+    padding: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+#tv-guide, .channel {
+    font-family: "Impact";
+    text-transform: uppercase;
+}
+
+.channel {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border: 2px solid black;
+    background-color: #66a3ff;
+    margin: 5px 0;
+    padding: 8px 5px;
+    width: 400px;
+    height: 35px;
+    transform: scale(1.2, 0.8);
+
+}
+
+.number {
+    background-color: #003366;
+    color: white;
+    padding: 5px 10px;
+    margin-right: 125px;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+.channel a{
+    color: black;
+    text-decoration: none;
+    font-size: 22px;
+    letter-spacing: 1px;
+    transform: scale(2, 1);
+    display: inline-block;
+    text-align: left;
+    flex-grow: 1;
+    white-space: nowrap;
+}
+
+.channel:hover {
+    background-color: yellow;
+}
+
+.channel:hover .number {
+    background-color: orange;
+}
+
+#about-box, #contact-box, #upload-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.1, 0.9);
+
+    width: 700px;         /* Adjust width as needed */
+    height: auto;         /* Let content define height */
+    min-height: 300px;    /* Force some height even if little text */
+    padding: 30px;
+
+    background-color: #66a3ff;
+    border: 4px solid #003366;
+    box-sizing: border-box;
+
+    font-family: "Impact", sans-serif;
+    text-transform: uppercase;
+    font-size: 20px;
+    color: black;
+    text-align: center;
+    line-height: 1.5;
+
+    z-index: 2;  /* ← ensures this is above background and logo */
+}
+
+body.music-page {
+    background: url("../static/music_background.png") no-repeat center center fixed;
+    background-size: cover;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.tile.active {
+    transform: scale(1.25);
+    z-index: 5;
+}
+
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .tile {
+        width: 40vw;
+        height: 54vw;
+    }
+}
+
+@media (max-width: 480px) {
+    .tile {
+        width: 60vw;
+        height: 80vw;
+    }
+}
+
+.home-button {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 140px;
+    height: 50px;
+    font-size: 1.25rem;
+
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid #ffffff22;
+    color: white;
+    font-family: Impact, sans-serif;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: background 0.3s ease, transform 0.2s ease;
+    z-index: 10;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.1);
+}
+
+.home-button:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateX(-50%) scale(1.05);
+}
+
+.nxe-wrapper {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    overflow: hidden;
+}
+
+.nxe-track {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    transform: translateX(200px);
+    transition: transform 0.3s ease;
+    will-change: transform;
+    position: relative;
+}
+
+.tile {
+    width: 300px;
+    height: 300px;
+    margin: 0;
+    background: linear-gradient(to bottom,
+    #4f8cff 0%,
+    #9a6eff 20%,
+    #000000 100%);
+    text-align: center;
+    justify-content: center;
+    font-family: Impact, sans-serif;
+    font-size: 1.5rem;
+    line-height: 400px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, z-index 0.3s ease, opacity 0.3s ease;
+    transform-origin: left center;
+}
+
+.tile-header {
+    top: 20px;
+    left: 60px;
+    z-index: 1000;
+    font-size: 2rem;
+    color: white;
+    pointer-events: none;
+}
+
+.category {
+    display: none;
+}
+
+.category.active {
+    display: flex;
+}
+
+.tile.active {
+    transform: scale(1);
+    opacity: 1;
+    margin-left: 200px;
+}
+
+#progress-bar-container {
+    display: none;
+    margin-top: 20px;
+    width: 100%;
+    height: 20px;
+    background: #ccc;
+    border: 2px solid #000;
+    overflow: hidden;
+    position: relative;
+}
+
+#progress-bar {
+    height: 100%;
+    width: 100%;
+    background: repeating-linear-gradient(
+        -45deg,
+        #66a3ff,
+        #66a3ff 10px,
+        #003366 10px,
+        #003366 20px
+    );
+    animation: barberpole 1s linear infinite;
+}
+
+@keyframes barberpole {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 40px 0;
+    }
+}
+
+#progress-text {
+    display: block;
+    margin-top: 10px;
+    color: black;
+    font-weight: bold;
+}
+
+.main-container {
+    position: relative;
+}
+
+.site-header {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    text-transform: uppercase;
+    font-family: Arial Black, sans-serif;
+    font-size: 4rem;
+/*    color: black; */
+    color: #66a3ff;
+    -webkit-text-fill-color: black;
+    -webkit-text-stroke: 1px;
+    z-index: 1000;
+    text-shadow: 1px 1px 2px black;
+    pointer-events: none;
+    white-space: nowrap;
+}
+
+.glitch-font {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 44px;
+    top: 13%;
+    left: 50%;
+    text-transform: uppercase
+
+}
+
+@keyframes glitch {
+    0% {
+        transform: skewX(0deg);
+    }
+    50% {
+        transform: skewX(10deg);
+    }
+    100% {
+        transform: skewX(0deg);
+    }
+}
+

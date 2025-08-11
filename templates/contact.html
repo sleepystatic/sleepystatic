@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div id="container">
+        <img id="logo" src="{{ url_for('static', filename='zzz_logo.png') }}" alt="ZZZ Logo">
+    </div>
+    <div id="contact-box">
+        <h1></h1>
+        <p>E-Mail: contact@sleepystatic.com</p>
+        <p>Text: (209)-645-0125</p>
+        <a href="http://instagram.com/">Instagram</a>
+        <a href="{{ url_for('home') }}" class="home-button">Home</a>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

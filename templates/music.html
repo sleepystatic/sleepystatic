@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Music</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="music-page">
+    <div id="container">
+        <img id="logo" src="{{ url_for('static', filename='zzz_logo.png') }}" alt="ZZZ Logo">
+    </div>
+    <div class="music-section">
+        <div class="nxe-wrapper">
+            <div class="nxe-track category active" data-title="Music">
+                <a class="tile">Spotify</a>
+                <div class="tile">SoundCloud</div>
+                <div class="tile">YouTube</div>
+                <div class="tile">Instagram</div>
+                <div class="tile">BandCamp</div>
+            </div>
+        </div>
+    </div>
+
+    <!--
+    <div class="tile-wrapper">
+        <div class="tile-container">
+            <a href="https://spotify.com/"c class="tile" target="_blank">Spotify</a>
+            <a href="https://soundcloud.com/" class="tile" target="_blank">SoundCloud</a>
+            <a href="https://youtube.com/@sleepystatic27" class="tile" target="_blank">YouTube</a>
+            <a href="https://instagram.com/sleeepystatic/" class="tile" target="_blank">Instagram</a>
+        </div>
+    </div>
+    -->
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <a href="/" class="home-button">Home</a>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
