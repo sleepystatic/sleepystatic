@@ -7,33 +7,124 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body class="music-page">
+    <a href="https://sleepystatic.com/" class="site-header">Sleepy Static</a>
+<div class="column-names">
+    <div class="column-name previous"></div>
+    <div class="column-name current"></div>
+    <div class="column-name next"></div>
+</div>
+
     <div id="container">
         <img id="logo" src="{{ url_for('static', filename='zzz_logo.png') }}" alt="ZZZ Logo">
     </div>
+
     <div class="music-section">
         <div class="nxe-wrapper">
-            <div class="nxe-track category active" data-title="Music">
-                <a class="tile">Spotify</a>
-                <div class="tile">SoundCloud</div>
-                <div class="tile">YouTube</div>
-                <div class="tile">Instagram</div>
-                <div class="tile">BandCamp</div>
+            <!-- Row 1: Streaming Platforms -->
+            <div class="nxe-track category active" data-title="Streaming Platforms" data-row="0">
+                <a href="https://spotify.com/" target="_blank">
+                    <div class="tile">
+                        <div class="tile-logo" style="background-image: url('{{ url_for('static', filename='spotify_logo.png') }}');"></div>
+                        <span class="tile-text">Spotify</span>
+                    </div>
+                </a>
+                <a href="https://soundcloud.com/" target="_blank">
+                    <div class="tile">
+                        <div class="tile-logo" style="background-image: url('{{ url_for('static', filename='soundcloud_logo.png') }}');"></div>
+                        <span class="tile-text">SoundCloud</span>
+                    </div>
+                </a>
+                <a href="https://youtube.com/@sleepystatic27/" target="_blank">
+                    <div class="tile">
+                        <div class="tile-logo" style="background-image: url('{{ url_for('static', filename='youtube_logo.png') }}');"></div>
+                        <span class="tile-text">YouTube</span>
+                    </div>
+                </a>
+                <a href="https://instagram.com/sleepystaticdotcom/" target="_blank">
+                    <div class="tile">
+                        <div class="tile-logo" style="background-image: url('{{ url_for('static', filename='instagram_logo.png') }}');"></div>
+                        <span class="tile-text">Instagram</span>
+                    </div>
+                </a>
+                <a href="https://bandcamp.com/" target="_blank">
+                    <div class="tile">
+                        <div class="tile-logo" style="background-image: url('{{ url_for('static', filename='bandcamp_logo.png') }}');"></div>
+                        <span class="tile-text">BandCamp</span>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Row 2: Music Releases -->
+            <div class="nxe-track category" data-title="Music Releases" data-row="1">
+                <a href="#" target="_blank">
+                    <div class="tile">
+                        <div class="tile-logo" style="background-image: url('{{ url_for('static', filename='album_placeholder.png') }}');"></div>
+                        <span class="tile-text">Latest Album</span>
+                    </div>
+                </a>
+                <a href="#" target="_blank">
+                    <div class="tile">
+                        <div class="tile-logo" style="background-image: url('{{ url_for('static', filename='singles_placeholder.png') }}');"></div>
+                        <span class="tile-text">Singles</span>
+                    </div>
+                </a>
+                <a href="#" target="_blank">
+                    <div class="tile">
+                        <div class="tile-logo" style="background-image: url('{{ url_for('static', filename='ep_placeholder.png') }}');"></div>
+                        <span class="tile-text">EP Collection</span>
+                    </div>
+                </a>
+                <a href="#" target="_blank">
+                    <div class="tile">
+                        <div class="tile-logo" style="background-image: url('{{ url_for('static', filename='remix_placeholder.png') }}');"></div>
+                        <span class="tile-text">Remixes</span>
+                    </div>
+                </a>
+                <a href="#" target="_blank">
+                    <div class="tile">
+                        <div class="tile-logo" style="background-image: url('{{ url_for('static', filename='collab_placeholder.png') }}');"></div>
+                        <span class="tile-text">Collabs</span>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Row 3: Visual Content -->
+            <div class="nxe-track category" data-title="Visual Content" data-row="2">
+                <a href="#" target="_blank">
+                    <div class="tile">
+                        <div class="tile-logo" style="background-image: url('{{ url_for('static', filename='musicvideo_placeholder.png') }}');"></div>
+                        <span class="tile-text">Music Videos</span>
+                    </div>
+                </a>
+                <a href="#" target="_blank">
+                    <div class="tile">
+                        <div class="tile-logo" style="background-image: url('{{ url_for('static', filename='live_placeholder.png') }}');"></div>
+                        <span class="tile-text">Live Shows</span>
+                    </div>
+                </a>
+                <a href="#" target="_blank">
+                    <div class="tile">
+                        <div class="tile-logo" style="background-image: url('{{ url_for('static', filename='studio_placeholder.png') }}');"></div>
+                        <span class="tile-text">Studio</span>
+                    </div>
+                </a>
+                <a href="#" target="_blank">
+                    <div class="tile">
+                        <div class="tile-logo" style="background-image: url('{{ url_for('static', filename='behind_placeholder.png') }}');"></div>
+                        <span class="tile-text">Behind Scenes</span>
+                    </div>
+                </a>
+                <a href="#" target="_blank">
+                    <div class="tile">
+                        <div class="tile-logo" style="background-image: url('{{ url_for('static', filename='lyrics_placeholder.png') }}');"></div>
+                        <span class="tile-text">Lyric Videos</span>
+                    </div>
+                </a>
             </div>
         </div>
     </div>
 
-    <!--
-    <div class="tile-wrapper">
-        <div class="tile-container">
-            <a href="https://spotify.com/"c class="tile" target="_blank">Spotify</a>
-            <a href="https://soundcloud.com/" class="tile" target="_blank">SoundCloud</a>
-            <a href="https://youtube.com/@sleepystatic27" class="tile" target="_blank">YouTube</a>
-            <a href="https://instagram.com/sleeepystatic/" class="tile" target="_blank">Instagram</a>
-        </div>
-    </div>
-    -->
     <script src="{{ url_for('static', filename='script.js') }}"></script>
     <a href="/" class="home-button">Home</a>
-    <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 </html>

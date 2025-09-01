@@ -1,24 +1,49 @@
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>$leepy$tatic</title>
-        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    </head>
-    <body>
-        <h1 class="site-header">Sleepy Static</h1>
-        <div id="container">
-            <img id="logo" src="{{ url_for('static', filename='zzz_logo.png') }}" alt="ZZZ Logo">
-        </div>
-        <script src="{{ url_for('static', filename='script.js') }}"></script>
-        <div id="tv-guide">
-            <div class="channel"><span class="number">1</span><a href="{{ url_for('music') }}">Music</a></div>
-            <div class="channel"><span class="number">2</span><a href="#">Games</a></div>
-            <div class="channel"><span class="number">3</span><a href="{{ url_for('upload') }}">Upload Video</a></div>
-            <div class="channel"><span class="number">4</span><a href="{{ url_for('contact') }}">Contact</a></div>
-            <div class="channel"><span class="number">5</span><a href="{{ url_for('about') }}">About</a></div>
-        </div>
-    </body>
-    </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>$leepy$tatic</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <meta name="description" content="Sleepy Static - Official music, visuals, and creative content. Electronic music producer and visual artist.">
+    <meta name="keywords" content="Sleepy Static, electronic music, music producer, visual art, experimental music">
+    <meta name="author" content="Sleepy Static">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sleepystatic.com/">
+    <meta property="og:title" content="Sleepy Static - Official Site">
+    <meta property="og:description" content="Official home of Sleepy Static. Music, visuals, and creative experiments.">
+    <meta property="og:image" content="https://sleepystatic.com/static/og-image.png">
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://sleepystatic.com/">
+    <meta property="twitter:title" content="Sleepy Static">
+    <meta property="twitter:description" content="Official home of Sleepy Static. Music, visuals, and creative experiments.">
+    <meta property="twitter:image" content="https://sleepystatic.com/static/og-image.png">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/static/apple-touch-icon.png"
+
+</head>
+<body class="home-page">
+    <!-- FIXED: Proper link structure -->
+    <a href="https://sleepystatic.com/" class="site-header">Sleepy Static</a>
+
+    <div id="container">
+        <img id="logo" src="{{ url_for('static', filename='zzz_logo.png') }}" alt="ZZZ Logo">
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <div id="tv-guide">
+        <div class="channel"><span class="number">1</span><a href="{{ url_for('music') }}">Music</a></div>
+        <div class="channel"><span class="number">2</span><a href="#">Shop</a></div>
+        <div class="channel"><span class="number">3</span><a href="{{ url_for('upload') }}">Upload Video</a></div>
+        <div class="channel"><span class="number">4</span><a href="{{ url_for('contact') }}">Contact</a></div>
+        <div class="channel"><span class="number">5</span><a href="{{ url_for('about') }}">About</a></div>
+    </div>
+</body>
+</html>
