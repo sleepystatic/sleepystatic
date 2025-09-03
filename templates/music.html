@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>Music</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/static/apple-touch-icon.png">
 </head>
 <body class="music-page">
     <a href="https://sleepystatic.com/" class="site-header">Sleepy Static</a>
@@ -28,13 +32,13 @@
                         <span class="tile-text">Spotify</span>
                     </div>
                 </a>
-                <a href="https://soundcloud.com/" target="_blank">
+                <a href="https://soundcloud.com/sleepystatic" target="_blank">
                     <div class="tile">
                         <div class="tile-logo" style="background-image: url('{{ url_for('static', filename='soundcloud_logo.png') }}');"></div>
                         <span class="tile-text">SoundCloud</span>
                     </div>
                 </a>
-                <a href="https://youtube.com/@sleepystatic27/" target="_blank">
+                <a href="https://youtube.com/@sleepystaticdotcom/" target="_blank">
                     <div class="tile">
                         <div class="tile-logo" style="background-image: url('{{ url_for('static', filename='youtube_logo.png') }}');"></div>
                         <span class="tile-text">YouTube</span>
@@ -125,6 +129,6 @@
     </div>
 
     <script src="{{ url_for('static', filename='script.js') }}"></script>
-    <a href="/" class="home-button">Home</a>
+    <a href="{{ url_for('home') }}" class="home-button">Home</a>
 </body>
 </html>

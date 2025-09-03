@@ -469,6 +469,19 @@ body, html {
     transform: translateY(10px);
 }
 
+.music-page .home-button {
+    z-index: 99999 !important;
+    position: fixed !important;
+    pointer-events: auto !important;
+}
+
+.shop-page .home-button {
+    bottom: 200px !important;
+    position: fixed !important;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
 /* === MOBILE OVERRIDES (SMALLER SIZES) === */
 @media (max-width: 768px) {
     /* MOBILE HEADER - SMALLER */
@@ -637,6 +650,12 @@ body, html {
     body.music-page .home-button {
         bottom: 20px !important; /* Lower for music page */
     }
+
+    body.shop-page .home-button {
+        bottom: 140px !important;
+    }
+
+
     .row-indicator {
     top: 60px;
     right: 20px;

@@ -2,25 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Shop - Coming Soon</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 
     <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/static/apple-touch-icon.png">
 </head>
-<body>
+<body class="home-page shop-page">
     <a href="https://sleepystatic.com/" class="site-header">Sleepy Static</a>
     <div id="container">
         <img id="logo" src="{{ url_for('static', filename='zzz_logo.png') }}" alt="ZZZ Logo">
     </div>
     <div id="about-box">
-        <p>Welcome to $leepy$tatic</p>
-        <p>Inspiring creativity sharing my art while expressing and encouraging a common ground</p>
-        <p>For inquiries please reach out through my contact section</p>
-        <a href="{{ url_for('home') }}" class="home-button">Home</a>
+        <h1>STAND BY</h1>
+        <p>Shop coming soon...</p>
+        <p>Check back later for exclusive items</p>
     </div>
+    <a href="{{ url_for('home') }}" class="home-button">Home</a>
     <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 </html>

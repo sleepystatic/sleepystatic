@@ -40,13 +40,9 @@ def home():
 def music():
     return render_template("music.html")
 
-@app.route('/games')
-def clothes():
-    return render_template("games.html")
-
-@app.route('/instagram')
-def instagram():
-    return render_template("instagram.html")
+@app.route('/shop')
+def shop():
+    return render_template("shop.html")
 
 @app.route('/contact')
 def contact():
@@ -55,7 +51,8 @@ def contact():
 @app.route('/about')
 def about():
     return render_template("about.html")
-@app.route('/upload', methods=['GET', 'POST'])
+
+"""
 def upload():
     if request.method == 'POST':
         # Check if file is present
@@ -129,6 +126,12 @@ def upload():
 
     return render_template("upload.html")
 
+"""
+@app.route('/upload', methods=['GET', 'POST'])
+def upload():
+    if request.method == 'POST':
+        return "Video processing temporarily disabled", 503
+    return render_template("upload.html")
 # Error handlers
 @app.errorhandler(413)
 def too_large(e):

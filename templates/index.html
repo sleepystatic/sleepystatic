@@ -27,7 +27,7 @@
 
     <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon-16x16.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/static/apple-touch-icon.png"
+    <link rel="apple-touch-icon" sizes="180x180" href="/static/apple-touch-icon.png">
 
 </head>
 <body class="home-page">
@@ -40,7 +40,7 @@
     <script src="{{ url_for('static', filename='script.js') }}"></script>
     <div id="tv-guide">
         <div class="channel"><span class="number">1</span><a href="{{ url_for('music') }}">Music</a></div>
-        <div class="channel"><span class="number">2</span><a href="#">Shop</a></div>
+        <div class="channel"><span class="number">2</span><a href="{{ url_for('shop') }}">Shop</a></div>
         <div class="channel"><span class="number">3</span><a href="{{ url_for('upload') }}">Upload Video</a></div>
         <div class="channel"><span class="number">4</span><a href="{{ url_for('contact') }}">Contact</a></div>
         <div class="channel"><span class="number">5</span><a href="{{ url_for('about') }}">About</a></div>
